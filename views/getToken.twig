@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html lang="en">
+{% include 'head.twig' %}
+<body>
+    <div id="container">
+        {% include 'header.twig' %}
+
+        <p>
+            Copy&amp;paste the code below in your application.
+        </p>
+
+        <p id="accessToken">
+        </p>
+
+        {% include 'footer.twig' %}
+    </div> <!-- /container -->
+    <script src="{{ rootFolder|e }}js/extractToken.js"></script>
+</body>
+</html>

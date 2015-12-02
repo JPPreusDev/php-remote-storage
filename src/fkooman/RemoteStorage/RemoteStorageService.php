@@ -111,6 +111,22 @@ class RemoteStorageService extends OAuthService
         );
 
         $this->get(
+            '/_callback',
+            function (Request $request)
+            {
+                return $this->templateManager->render(
+                    'getToken',
+                    array()
+                );
+            },
+            array(
+                'fkooman\Rest\Plugin\Authentication\AuthenticationPlugin' => array(
+                    'enabled' => false,
+                ),
+            )
+        );
+
+        $this->get(
             '/.well-known/webfinger',
             function (Request $request) {
                 $resource = $request->getUrl()->getQueryParameter('resource');
