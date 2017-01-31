@@ -13,7 +13,7 @@
     },
     "description": "remoteStorage Server",
     "license": "AGPL-3.0",
-    "name": "fkooman/remote-storage",
+    "name": "jppreusdev/remote-storage",
     "require": {
         "ext-date": "*",
         "ext-filter": "*",
